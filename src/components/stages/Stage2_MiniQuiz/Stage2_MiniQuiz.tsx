@@ -63,7 +63,7 @@ const Stage2_MiniQuiz = ({ onComplete }: MiniQuizProps) => {
       setFeedback(
         isLastQuestion
           ? FEEDBACK_MESSAGES.quizComplete
-          : FEEDBACK_MESSAGES.success
+          : FEEDBACK_MESSAGES.success,
       );
 
       setTimeout(() => {
@@ -89,14 +89,8 @@ const Stage2_MiniQuiz = ({ onComplete }: MiniQuizProps) => {
     <div className="min-h-screen bg-linear-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] flex flex-col items-center justify-center px-5 py-8 overflow-hidden relative">
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute w-72 h-72 bg-pink-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        <div
+          className="absolute w-72 h-72 bg-pink-500/15 rounded-full blur-2xl"
           style={{ top: "10%", left: "-10%" }}
         />
         <motion.div
